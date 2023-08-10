@@ -1,4 +1,7 @@
 title : spam game 
+:::::::::::::::::
+first ignore (#ifjglasjkhg.py , adbkey , adbkey.pub , for the test key , test#2 , test#3)
+the only file that are correct is #game.py and README.md
 
 
 Badges
