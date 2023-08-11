@@ -1,2 +1,0 @@
-#lfhjglasjkhg
-print ("hello")
