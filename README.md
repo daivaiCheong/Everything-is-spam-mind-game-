@@ -9,7 +9,7 @@ Welcome to the Number Guessing Game! This is a simple Python game where the play
 3. Enter your guess and receive feedback if your guess is too high or too low.
 4. Keep guessing until you get the correct number or decide to exit.
 5. If you guess incorrectly, the computer will shut down after a 30-second delay.
-6.the surprise awaiting you at the end
+6. the surprise awaiting you at the end
 
 ## Getting Started
 
